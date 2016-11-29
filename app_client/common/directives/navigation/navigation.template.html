@@ -1,0 +1,25 @@
+<div class="navbar navbar-default navbar-fixed-top">
+  <div class="container ">
+    <div class="navbar-header">
+      <a href="/" class="navbar-brand">上海纳纳</a>
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-main">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+    <div id="navbar-main" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li><a href="/#about">公司简介</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li ng-hide="navvm.isLoggedIn"><a href="/#login/?page={{ navvm.currentPath }}">登录</a></li>
+        <li ng-show="navvm.isLoggedIn" class="dropdown"><a href="" data-toggle="dropdown" class="dropdown-toggle">{{navvm.currentUser.name}} <span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="" ng-click="navvm.logout()">退出</a></li>
+            </ul>
+          </a></li>
+      </ul>
+    </div>
+  </div>
+</div>
